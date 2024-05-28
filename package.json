@@ -1,0 +1,22 @@
+{
+  "name": "demo-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.44.0",
+    "@types/node": "^20.12.12",
+    "checkly": "latest",
+    "jsonpath": "^1.1.1",
+    "ts-node": "latest",
+    "typescript": "latest"
+  },
+  "dependencies": {
+    "@api/checkly-public-api": "file:.api/apis/checkly-public-api",
+    "dotenv": "^16.4.5"
+  }
+}

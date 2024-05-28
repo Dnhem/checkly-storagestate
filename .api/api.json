@@ -1,0 +1,11 @@
+{
+  "version": "1.0",
+  "apis": [
+    {
+      "identifier": "checkly-public-api",
+      "source": "@checkly-public-api/v1#g8l58xolwl42n2n",
+      "integrity": "sha512-Lh8YX03c/iH4gGfQQy8NOtBtaWIB6yC/D16t1smVcrRIgiEaTVsbuR0JWnpXWnBf8dLFqpzsNGCby/ZXX/oVTQ==",
+      "installerVersion": "6.1.1"
+    }
+  ]
+}
