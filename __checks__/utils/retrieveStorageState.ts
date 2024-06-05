@@ -1,6 +1,4 @@
 import { createChecklyContext } from "./createChecklyContext";
-import dotenv from "dotenv";
-dotenv.config();
 
 export async function retrieveStorageState() {
   const context = await createChecklyContext(
@@ -10,9 +8,11 @@ export async function retrieveStorageState() {
 
   let responseStorageState = await context.get(`variables/STORAGE_STATE`);
   let responseData = await responseStorageState.json();
-  const parsedStorageState = responseData.value;
 
-  console.log(">>>>>>>>>PARSED STORAGE STATE:", parsedStorageState);
-  // Return the storage state
-  return parsedStorageState;
+  const parsedStorageState = JSON.parse(responseData.value);
+
+  const jwtToken = parsedStorageState.origins[0].localStorage[0];
+  console.log(jwtToken);
+
+  return jwtToken;
 }

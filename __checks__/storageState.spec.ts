@@ -1,5 +1,5 @@
-import { test as setup } from "@playwright/test";
-import { createChecklyContext } from "../__checks__/utils/createChecklyContext";
+import { test, test as setup } from "@playwright/test";
+import { createChecklyContext } from "./utils/createChecklyContext";
 
 setup("login credentials", async ({ page, baseURL }) => {
   const context = await createChecklyContext(
@@ -11,18 +11,21 @@ setup("login credentials", async ({ page, baseURL }) => {
     waitUntil: "networkidle",
   });
   await page.getByText("Sign in").click();
-  await page.getByRole("textbox", { name: "Email" }).fill("deebo@gmail.com");
-  await page.getByRole("textbox", { name: "Password" }).fill("Whatever415!");
+  await page
+    .getByRole("textbox", { name: "Email" })
+    .fill(`${process.env.USER_NAME}`);
+  await page
+    .getByRole("textbox", { name: "Password" })
+    .fill(`${process.env.PASSWORD}`);
   await page.getByRole("button").click();
 
   //   endpoint reached (Page loading complete)
-  await page.waitForResponse("https://conduit-api.bondaracademy.com/api/tags");
+  await page.waitForResponse(`${process.env.PAGE_URL}`);
 
   //   capture snapshot of local storage
   const storage = await page.context().storageState();
   //   stringify the storage to format for checkly API
   const stringifiedStorage = JSON.stringify(storage);
-  console.log(">>>>>>>>>STRINGIFIED STORAGE:", stringifiedStorage);
 
   // update env variable with stringified storage
   await context.put(`variables/STORAGE_STATE`, {
