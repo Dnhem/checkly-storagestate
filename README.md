@@ -19,12 +19,13 @@
 ## Benefits
 ⚡️ Simplified Login - persist authentication states (e.g., cookies & local storage) enabling tests to persist state increasing testing speed
 <br />
+
 🪨 Stability - Ensures a consistent starting point avoiding flaky tests that fail due to variations in state
 
 ## Files used in example
 
 ### 📁 utils
-- `createChecklyContext.ts` - abstracts HTTP requests, something similar to `axios.create()`
+- `createChecklyContext.ts` - abstracts HTTP requests, something similar to `[axios.create()](https://axios-http.com/docs/instance)`
 - `retrieveStorageState.ts` - retrieves environment variable (storageState) from Checkly public API to parse and return token
 (token validation can be added here)
 
