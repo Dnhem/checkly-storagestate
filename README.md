@@ -36,7 +36,7 @@
 - `crud-article.spec.ts` - test that only passes with valid JWT retrieved from storageState
   
 ## Mechanism
-To securely store and update the storageState, create an environment variable with a ***placeholder value*** [directly on Checkly](https://app.checklyhq.com/environment-variables) or use the command `npx checkly env add <key> <value>`. This variable will hold the stringified storageState. The `storageState.spec.ts` file updates this environment variable by pinging the [Checkly Public API](https://developers.checklyhq.com/reference/getv1variables). Our main test file `crud-article.spec.ts` retrieves the storageState from Checkly and writes it to the browser’s local storage before running tests.
+To securely store and update the storageState, create an environment variable with a ***placeholder value*** [directly on Checkly](https://app.checklyhq.com/environment-variables) or use the command `npx checkly env add <key> <value>`. This variable will hold the stringified storageState. The `storageState.spec.ts` file updates this environment variable by pinging the [Checkly Public API](https://developers.checklyhq.com/reference/getv1variables). Your Checkly [ACCOUNT ID](https://app.checklyhq.com/settings/account/general) & [API KEY](https://app.checklyhq.com/settings/user/api-keys) will be required to ping the Checklyl Public API. Our main test file `crud-article.spec.ts` retrieves the storageState from Checkly and writes it to the browser’s local storage before running tests.
 
 ## Use cases
 ### Local testing
