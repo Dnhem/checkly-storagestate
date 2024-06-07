@@ -30,7 +30,7 @@
 (token validation can be added here)
 
 ### 📁 \_\_checks\_\_
-- `browser.check.ts` - Checkly CLI constructs that groups and configure checks
+- `browser.check.ts` - Checkly CLI constructs that groups and configures checks
 - `login.spec.ts` - simple login script that test for successful login
 - `storageState.spec.ts` - mechanism that captures storageState
 - `crud-article.spec.ts` - test that only passes with valid JWT retrieved from storageState
