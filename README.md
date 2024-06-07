@@ -25,7 +25,7 @@
 ## Files used in example
 
 ### 📁 utils
-- `createChecklyContext.ts` - abstracts HTTP requests, something similar to `[axios.create()](https://axios-http.com/docs/instance)`
+- `createChecklyContext.ts` - abstracts HTTP requests, something similar to `axios.create()`
 - `retrieveStorageState.ts` - retrieves environment variable (storageState) from Checkly public API to parse and return token
 (token validation can be added here)
 
