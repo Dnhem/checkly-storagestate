@@ -17,7 +17,7 @@
 - Log in and persist local storage via UI interaction. API version coming soon...
   
 ## Benefits
-⚡️ Simplified Login - persist authentication states (e.g., cookies & local storage) enabling tests to persist state increasing testing speed
+⚡️ Simplified Login - Persist authentication states (e.g., cookies & local storage) enabling tests to persist state increasing testing speed
 <br />
 
 🪨 Stability - Ensures a consistent starting point avoiding flaky tests that fail due to variations in state
