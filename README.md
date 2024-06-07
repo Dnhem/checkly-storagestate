@@ -53,7 +53,7 @@ Have your test run on a schedule globally on Checkly with `npx checkly deploy`
 Since your checks will be dependant on valid storageState first, the `storageState.spec.ts` must be ran first, similarily to the Local testing example. Add an extra job BEFORE running the rest of the checks to your workflow file:
 
 ```
-- name: Run auth # Retrieve storageState before running rest of tests.
+- name: Run auth # retrieve storageState before running rest of tests.
   id: run-auth
   run: npx checkly test -t storage -e USER_NAME=${{ env.USER_NAME }} PASSWORD=${{ env.PASSWORD }}
 - name: Run checks # run the checks passing in the ENVIRONMENT_URL and recording a test session.
