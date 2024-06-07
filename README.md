@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-<h3 align="center">Checkly storageState Browser v 1.0</h3>
+<h3 align="center">Checkly storageState Browser v1.0</h3>
   <p align="center">
     <a href="https://www.checklyhq.com/docs/"><strong>Explore the docs »</strong></a>
     <br />
@@ -24,14 +24,16 @@
 ## 🏃🏻 Rundown of folder and file structure:
 
 ### 📁 utils
-
-Directory housing Checkly's core directory "\_\_checks\_\_" also contains the "alert-channels.ts" file which holds all the alert constructs.
+- `createChecklyContext.ts` - abstracts HTTP requests, something similar to `axios.create()`
+- `retrieveStorageState.ts` - retrieves environment variable (storageState) from Checkly public API to parse and return token
 
 ### 📁 \_\_checks\_\_
-
-The core directory where Checkly detects your test files to run and deploy.
-
+- `browser.check.ts` - Checkly CLI constructs that groups and configure checks
+- `login.spec.ts` - simple login script that test for successful login
+- `storageState.spec.ts` - mechanism that captures storageState
+  
 ## Implementation
+
 
 ## ♾️ Deploying via CI/CD Pipeline
 
