@@ -50,7 +50,7 @@ Have your test run on a schedule globally on Checkly with `npx checkly deploy`
 - If your test files are dependant on env variables, I find it best to avoid unexpected behavior by setting them on the dashboard on the [global level](https://app.checklyhq.com/environment-variables).
 
 ### CI Integration
-Since your checks will be dependant on valid storageState first, the `storageState.spec.ts` must be ran first, similarily to the Local testing example. Add an extra job BEFORE running the rest of the checks to your workflow file:
+Since your checks will be dependant on valid storageState, the `storageState.spec.ts` must be ran first, similarily to the Local testing example. Add an extra job BEFORE running the rest of the checks to your workflow file:
 
 ```
 - name: Run auth # retrieve storageState before running rest of tests.
