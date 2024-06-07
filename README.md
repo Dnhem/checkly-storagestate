@@ -11,7 +11,7 @@
 <!-- Details -->
 
 ## Details
-- A hacky work-around to mimic Playwright's storageState
+- A work-around to mimic Playwright's storageState
 - CAUTION: Not part of Checkly's official documentation/guides, use at your own risk
 - Code is not meant to be cloned and only provide an example of the mechanism
 - Log in and persist local storage via UI interaction. API version coming soon...
